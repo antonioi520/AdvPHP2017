@@ -6,7 +6,11 @@
     </head>
     <body>
         <?php
-        // put your code here
+        
+        require_once './models/dbconnect.php';
+        require_once './models/util.php';
+
+        
         ?>
     </body>
 </html>
