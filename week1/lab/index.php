@@ -7,8 +7,14 @@
     <body>
         <?php
         
-        require_once './models/dbconnect.php';
-        require_once './models/util.php';
+        include './models/dbconnect.php';
+        include './models/addressCRUD.php';
+        
+        $addresses = readALLAddress();
+        
+        include './templates/view-address.html.php';
+        
+        
 
         
         ?>

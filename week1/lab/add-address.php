@@ -10,7 +10,7 @@
         require_once './models/dbconnect.php';
         require_once './models/util.php';
         require_once './models/addressCRUD.php';
-        
+        require_once './models/validation.php';
         
         $fullname = filter_input(INPUT_POST, 'fullname');
         $email = filter_input(INPUT_POST, 'email');
@@ -57,8 +57,35 @@
             }
             
             //Validate Zip
-            if ( !isZIPValid($zipRegex, $zip) ) {
+            if ( !isZIPValid($zip) ) 
+            {
                 $errors[] = 'Sorry ZIP is not valid';
+            }
+            
+            //Validate Date
+            if ( !isDateValid($birthday) ) 
+            {
+                $errors[] = 'Sorry Birthday is not valid';
+            }
+            
+            //If no errors, save to database
+            if ( count($errors) === 0 )
+            {
+                if (createAddress($fullname, $email, $addressline1, $city, $state, $zip, $birthday))
+                {
+                    $message = 'Address Added';
+                    $fullname = '';
+                    $email = '';
+                    $addressline1 = '';
+                    $city = '';
+                    $state = '';
+                    $zip = '';
+                    $birthday = '';
+                }
+                else
+                {
+                    $errors[] = 'Could not add to the database';
+                }
             }
         }
         

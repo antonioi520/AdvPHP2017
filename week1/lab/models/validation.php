@@ -1,5 +1,6 @@
 <?php
 
+//Validate Zip (5 numbers)
 function isZIPValid($zip)
 {
  $zipRegex = '/^[0-9]{5}$/';
@@ -10,7 +11,8 @@ function isZIPValid($zip)
     return false;  
 }
 
-function isDateValid($birthday)
+//Validate date 
+function isDateValid($date)
 {
     return (bool)strtotime($date);
 }
