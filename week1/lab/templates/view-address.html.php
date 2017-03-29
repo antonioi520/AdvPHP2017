@@ -1,3 +1,4 @@
+<!-- View table of saved addresses --> 
 <?php if ( is_array($addresses) && count($addresses) > 0 ) : ?>
 <h1>Addresses</h1>
 <table>
