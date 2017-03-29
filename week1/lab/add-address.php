@@ -21,7 +21,7 @@
               
         $errors = [];
         
-        if (ifPostRequest())
+        if (isPostRequest())
         {
             if( empty($fullname) )
             {
