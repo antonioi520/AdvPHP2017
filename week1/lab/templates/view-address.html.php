@@ -4,13 +4,13 @@
 <h1>Addresses</h1>
 <table class="table table-striped table-hover" >
     <tr>
-        <td>Full Name</td>
-        <td>Email</td>
-        <td>Address Line 1</td>
-        <td>City</td>
-        <td>State</td>
-        <td>Zip</td>
-        <td>Date</td>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Address Line 1</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+        <th>Date</th>
     </tr>
 <?php foreach( $addresses as $row ) : ?>
     <tr>
