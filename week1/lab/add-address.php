@@ -2,6 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="./css/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="./css/css/bootstrap.css">
     </head>
     <body>
         <?php
@@ -90,6 +94,7 @@
         }
         
         //Incude templates
+        include './templates/nav.php';
         include './templates/errors.html.php';
         include './templates/messages.html.php';
         include './templates/add-address.html.php';
