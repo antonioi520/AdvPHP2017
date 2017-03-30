@@ -1,7 +1,17 @@
 <!-- View table of saved addresses --> 
 <?php if ( is_array($addresses) && count($addresses) > 0 ) : ?>
+<div class="container">
 <h1>Addresses</h1>
-<table>
+<table class="table table-striped table-hover" >
+    <tr>
+        <td>Full Name</td>
+        <td>Email</td>
+        <td>Address Line 1</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Zip</td>
+        <td>Date</td>
+    </tr>
 <?php foreach( $addresses as $row ) : ?>
     <tr>
         <td><?php echo $row['fullname']; ?></td>
@@ -15,3 +25,4 @@
 <?php endforeach; ?>
 </table>
 <?php endif; ?>
+</div>
