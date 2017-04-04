@@ -19,4 +19,9 @@ class Square implements IShapes {
     public function area() {
         return $this->width() * $this->height();
     }
+    
+    public function color($color) {
+        
+    }
+    
 }
