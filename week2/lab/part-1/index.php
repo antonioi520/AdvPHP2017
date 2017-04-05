@@ -35,7 +35,15 @@ and open the template in the editor.
         $test2->removeMessage("test3");
         var_dump('<br />', $test2->getAllMessages());
         
+        //test successmessage functions
+        $test3 = new SuccessMessage();
         
+        $test3->addMessage("test1", 'Testing Success Message 1');
+        $test3->addMessage("test2", 'Testing Success Message 2');
+        $test3->addMessage("test3", 'Testing Success Message 3');
+        
+        $test3->removeMessage("test1");
+        var_dump('<br />', $test3->getAllMessages());
         
         
         ?>
