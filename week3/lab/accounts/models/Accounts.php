@@ -61,12 +61,12 @@ class Accounts extends DB {
 
     function getUserInfo() 
     {
-        $stmt = $this->getDb()->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
-
+        $stmt = $this->getDb()->prepare("SELECT user_id, email from users WHERE email = :email");
+        
         
         $results = array();
         if ($stmt->execute() && $stmt->rowCount() > 0) {
-           $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+           $results = $stmt->fetch(PDO::FETCH_ASSOC);
         }
         
         return $results;
