@@ -17,16 +17,18 @@ and open the template in the editor.
         include './autoload.php';
         $util = new Util();
         $accounts = new Accounts();
-        $userInfo = $accounts->getUserInfo()
+        //$userInfo = $accounts->getUserInfo()
      
         ?>   
         <h1>Admin Page</h1>
-        <?php foreach( $userInfo as $row ) : ?>
-            <tr>
-                <td><?php echo $row['user_id']; ?></td>
-                <td><?php echo $row['email']; ?></td>               
-            </tr>
-        <?php endforeach; ?>
+        
+        <?php 
+        $user_id = $_SESSION['user_id'];
+        echo "User ID: ".$user_id;
+        
+        
+        
+        ?>
         
       
         
