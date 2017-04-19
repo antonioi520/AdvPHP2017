@@ -25,6 +25,7 @@
        
         <div class="col-md-3"></div>
         <div class="col-md-6">
+            
         <table class="table table-bordered">
         <?php foreach ($directory as $fileInfo) : ?>        
             <?php if ( $fileInfo->isFile() ) : ?> 
@@ -40,6 +41,7 @@
             <?php endif; ?>
         <?php endforeach; ?>
         </table>
+            
         </div>
         
 
