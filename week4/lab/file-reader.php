@@ -1,7 +1,7 @@
 <?php
 include './templates/nav.php';
-//$finame = $_GET['name'];
-$filename = '.'.DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'file_50aa07939d9b96054deaeb350737905d9fad34f2.jpg';
+$finame = $_GET['name'];
+$filename = '.'.DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.$finame;
   /* SplFileObject extends from SplFileInfo so you can use the same functions 
    * from SplFileInfo with SplFileObject 
    */         

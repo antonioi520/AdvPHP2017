@@ -34,7 +34,7 @@
 <!--            <p>uploaded on <?php //echo date("l F j, Y, g:i a", $fileInfo->getMTime()); ?></p>
                 <p>This file is <?php //echo $fileInfo->getSize(); ?> byte's</p>
                 <img src="<?php //echo $fileInfo->getPathname(); ?>" />-->
-             <td><a href="file-reader.php">Details</a></td>
+            <td><a href="file-reader.php?name=<?php echo $fileInfo->getFilename(); ?>">Details</a></td>
             <td><a href="#">Delete</a></td>
             </tr>
                 
