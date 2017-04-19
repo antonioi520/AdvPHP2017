@@ -39,7 +39,7 @@ $mimeType = $finfo->file($filename);
         $b64 = base64_encode($contents);
         echo '<img src="data:'.$mimeType.';base64,'.$b64.'"/>';
         ?>
-            
+            <input type='submit' value='Delete' name='Delete'  />
         </div>
         
     </body>
