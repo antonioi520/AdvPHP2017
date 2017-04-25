@@ -8,6 +8,8 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="css/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/css/bootstrap.css">
     </head>
     <body>
         <?php
@@ -32,7 +34,7 @@ and open the template in the editor.
             
         }
         
-        
+        include './views/nav.php';
         include './views/signup.html.php';
         
         ?>

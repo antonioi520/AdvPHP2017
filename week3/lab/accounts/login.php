@@ -6,8 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">      
         <title></title>
+        <link rel="stylesheet" href="css/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/css/bootstrap.css">
     </head>
     <body>
         <?php
@@ -30,8 +32,8 @@ and open the template in the editor.
                 echo "please try again";
             }
         }
-        
-        include './views/login.html.php'
+        include './views/nav.php';
+        include './views/login.html.php';
         
         ?>
     </body>

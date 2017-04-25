@@ -59,17 +59,17 @@ class Accounts extends DB {
         return false;
     }
 
-    function getUserInfo() 
-    {
-        $stmt = $this->getDb()->prepare("SELECT user_id, email from users WHERE email = :email");
-        
-        
-        $results = array();
-        if ($stmt->execute() && $stmt->rowCount() > 0) {
-           $results = $stmt->fetch(PDO::FETCH_ASSOC);
-        }
-        
-        return $results;
-  
-    }
+//    function getUserInfo() 
+//    {
+//        $stmt = $this->getDb()->prepare("SELECT user_id, email from users WHERE email = :email");
+//        
+//        
+//        $results = array();
+//        if ($stmt->execute() && $stmt->rowCount() > 0) {
+//           $results = $stmt->fetch(PDO::FETCH_ASSOC);
+//        }
+//        
+//        return $results;
+//  
+//    }
 }

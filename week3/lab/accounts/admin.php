@@ -8,6 +8,8 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="css/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/css/bootstrap.css">
     </head>
     <body>
         <?php
@@ -17,7 +19,7 @@ and open the template in the editor.
         include './autoload.php';
         $util = new Util();
         $accounts = new Accounts();
-        $userInfo = $accounts->getUserInfo()
+        
      
         ?>   
         <h1>Admin Page</h1>
@@ -25,7 +27,7 @@ and open the template in the editor.
         <?php 
         $user_id = $_SESSION['user_id'];
         echo "User ID: ".$user_id;
-        
+       
         
         
         
