@@ -1,0 +1,22 @@
+<h1>Corps Details</h1>
+
+<div class="content">
+    
+    <h2>{{vm.corps.corp | uppercase}}</h2>
+
+    <p><strong> Owner:</strong> {{vm.corps.owner}} </p>
+    <p><strong> Incorp_dt:</strong> {{ vm.corps.incorp_dt | date:'longDate' }} </p>          
+    <p><strong> Email: </strong>
+        <a href="" ng-href="mailto:{{vm.corps.email}}">{{vm.corps.email}}</a>
+    </p>
+    <p><strong> Phone:</strong> <a href="tel:+{{vm.corps.phone}}">{{vm.corps.phone}} </a></p>
+    <address>
+        {{vm.corps.location}}
+    </address>
+    
+    
+    <div class="googleMap"></div>
+    
+    
+    <p><a href="#/corps">Back</a></p>
+</div>

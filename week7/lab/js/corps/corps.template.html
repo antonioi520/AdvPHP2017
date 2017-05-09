@@ -1,0 +1,35 @@
+<h1>Corps Table</h1>
+
+<div class="content">
+    
+    <h3>Search</h3>
+    <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+    <input ng-model="searchText">
+    
+    <br />
+    <br /> 
+    <p>{{vm.message}}</p>
+    <table id="searchTextResults" class="gridtable">
+        <thead>
+            <tr>
+                <th>Corp</th>             
+                <th>Email</th>
+                <th>Owner</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>    
+        
+        <tr ng-repeat="corps in vm.corps | filter:searchText">
+            <td>{{corps.corp}}</td>                  
+            <td>{{corps.email}}</td>
+            <td>{{corps.owner}}</td>
+            <td><a ng-href="#/corps/{{corps.id}}">View</a></td>
+            <td><a ng-href="#/corps/delete/{{corps.id}}" data-confirm-delete>Delete Link</a></td>
+            <td><button ng-click="vm.deleteCorps(corps.id)">Delete</button></td>
+        </tr>
+    </table>
+        
+</div>
+
