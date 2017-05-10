@@ -4,10 +4,12 @@
     
     <h3>Search</h3>
     <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+    <!-- Search table -->
     <input ng-model="searchText">
     
     <br />
     <br /> 
+    
     <p>{{vm.message}}</p>
     <table id="searchTextResults" class="gridtable">
         <thead>
@@ -20,6 +22,7 @@
                 <th></th>
             </tr>
         </thead>    
+        
         
         <tr ng-repeat="corps in vm.corps | filter:searchText">
             <td>{{corps.corp}}</td>                  

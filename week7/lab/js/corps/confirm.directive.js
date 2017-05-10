@@ -2,7 +2,7 @@
     
 'use strict';
 angular
-    .module('app.address')
+    .module('app.corps')
     .directive('confirmDelete', confirmDelete);
     
     confirmDelete.$inject = ['$window'];
