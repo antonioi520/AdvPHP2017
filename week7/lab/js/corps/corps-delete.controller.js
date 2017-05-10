@@ -14,14 +14,14 @@
 
         vm.message = '';
         
-        var corpsId = $routeParams.Id;
+        var Id = $routeParams.Id;
 
         activate();
 
         ////////////
 
         function activate() {
-            CorpsService.deleteCorps(corpsId).then(function (response) {
+            CorpsService.deleteCorps(Id).then(function (response) {
                 vm.message = 'Corps Deleted';
             }, function(error) {
                 vm.message = 'Corps was NOT Deleted';
